@@ -8,6 +8,7 @@
         </style>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.0.0/pixi.min.js"></script>
         <script src="Far.js"></script>
+        <script src="Mid.js"></script>
     </head>
     <body onload="init();">
         <div align="center">
@@ -26,20 +27,15 @@
                 far = new Far();
                 stage.addChild(far);
 
-                var midTexture = PIXI.Texture.fromImage("https://i.imgur.com/3Kblu2O.png");
-                mid = new PIXI.TilingSprite(midTexture, 512, 256);
-                mid.position.x = 0;
-                mid.position.y = 128;
-                mid.tilePosition.x = 0;
-                mid.tilePosition.y = 0;
+                mid = new Mid();
                 stage.addChild(mid);
 
                 requestAnimationFrame(update);
             }
 
             function update() {
-                far.tilePosition.x -= 0.128;
-                mid.tilePosition.x -= 0.64;
+                far.update();
+                mid.update();
 
                 renderer.render(stage);
 
