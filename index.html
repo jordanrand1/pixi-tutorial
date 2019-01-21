@@ -7,6 +7,7 @@
           canvas { background-color: #222222; }
         </style>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.0.0/pixi.min.js"></script>
+        <script src="Far.js"></script>
     </head>
     <body onload="init();">
         <div align="center">
@@ -22,12 +23,7 @@
                     {view:document.getElementById("game-canvas")}
                 );
 
-                var farTexture = PIXI.Texture.fromImage("https://i.imgur.com/cnd7J6F.png");
-                far = new PIXI.extras.TilingSprite(farTexture, 512, 256);
-                far.position.x = 0;
-                far.position.y = 0;
-                far.tilePosition.x = 0;
-                far.tilePosition.y = 0;
+                far = new Far();
                 stage.addChild(far);
 
                 var midTexture = PIXI.Texture.fromImage("https://i.imgur.com/3Kblu2O.png");
