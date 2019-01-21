@@ -10,6 +10,7 @@
         <script src="Far.js"></script>
         <script src="Mid.js"></script>
         <script src="Scroller.js"></script>
+        <script src="Main.js"></script>
     </head>
     <body onload="init();">
         <div align="center">
@@ -18,24 +19,7 @@
         <script src="pixi.js-master/bin/pixi.dev.js"></script>
         <script>
             function init() {
-                stage = new PIXI.Container();
-                renderer = PIXI.autoDetectRenderer(
-                    512,
-                    384,
-                    {view:document.getElementById("game-canvas")}
-                );
-
-                scroller = new Scroller(stage);
-
-                requestAnimationFrame(update);
-            }
-
-            function update() {
-                scroller.moveViewportXBy(5);
-                
-                renderer.render(stage);
-
-                requestAnimationFrame(update);
+                main = new Main();
             }
         </script>
     </body>
