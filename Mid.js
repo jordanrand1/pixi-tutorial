@@ -1,5 +1,5 @@
-function Far() {
-    const texture = PIXI.Texture.fromImage("https://i.imgur.com/cnd7J6F.png");
+function Mid() {
+    const texture = PIXI.Texture.fromImage("https://i.imgur.com/3Kblu2O.png");
     PIXI.extras.TilingSprite.call(this, texture, 512, 256);
 
     this.position.x = 0;
@@ -8,4 +8,4 @@ function Far() {
     this.tilePosition.y = 0;
 }
 
-Far.prototype = Object.create(PIXI.extras.TilingSprite.prototype);
+Mid.prototype = Object.create(PIXI.extras.TilingSprite.prototype);
